@@ -10,7 +10,8 @@ function separate_external {
 }
 
 function general {
-	if [ -f *$2 ]
+	count=`ls -1 *$2 2>/dev/null | wc -l`
+	if [ $count != 0 ]
 	then
 		echo "Process staring to move the $2 files"
 		separate_internal
