@@ -49,6 +49,14 @@ function organize {
 	separate_internal
 	general "text_files" ".txt"
 	general "PDFs" ".pdf"
+	general "zips" ".gz"
+	general "images" ".png"
+	general "images" ".jpg"
+	general "images" ".jpeg"
+	general "vector_images" ".svg"
+	general "docs" ".odt"
+	general "docs" ".docx"
+	general "isos" ".iso"
 }
 
 organize
