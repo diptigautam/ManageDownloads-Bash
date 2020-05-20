@@ -48,9 +48,7 @@ function organize {
 	echo $files
 	separate_internal
 	general "text_files" ".txt"
-	separate_internal
 	general "PDFs" ".pdf"
-	separate_external
 }
 
 organize
