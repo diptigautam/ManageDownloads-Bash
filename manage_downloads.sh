@@ -41,22 +41,28 @@ function general {
 
 
 
-function organize {
+function manage_downloads {
 	files=$(ls -1Ap | grep -v /)	
        	echo "Listing all files in the directory..."
 	separate_internal
 	echo $files
 	separate_internal
 	general "text_files" ".txt"
+	general "text_files" ".md"
 	general "PDFs" ".pdf"
 	general "zips" ".gz"
+	general "zips" ".zip"
 	general "images" ".png"
 	general "images" ".jpg"
 	general "images" ".jpeg"
+	general "videos" ".mp4"
+	general "audio" ".mp3"
+	general "audio" ".opus"
+	general "HTML" ".html"
 	general "vector_images" ".svg"
 	general "docs" ".odt"
 	general "docs" ".docx"
 	general "isos" ".iso"
 }
 
-organize
+manage_downloads
