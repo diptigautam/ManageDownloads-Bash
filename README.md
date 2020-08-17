@@ -1,20 +1,36 @@
 # Manage your Downloads
 
-### This script should be run on the Downloads directory, and added source to the bash rc file, so that it can be executed from the command line without having to run with bash each time.
+### This script was originally intended to be run on the Downloads directory, to manage the directory as it becomes more cluttered once you start downloading  alot of files and programs, hence the name, but it can be used in any directory of your choice that needs decluttering. Just make sure to follow the steps mentioned below! 
 
-# What the program should do are the following:
-- Arrange the file extensions into folders, such as:
-- All files ending with .txt should be transferred into a folder called text_files
-- All files ending with .gz should be transferred into a folder called zips
-- All files ending with .png/.jpg/.jpeg etc should be transferred into a folder called images
-- All files ending with .pdf should be transferred into a folder called pdfs
-- All files ending with .svg should be transferred into a folder called vector_images
-- All files ending with .docx/.odt etc should be transferred into a folder called docs.
-- And so on.
+* Download the script, and move to a directory of your choice in your PC.
+
+* Open the terminal and from there, open `.bash_profile` file with `nano`. 
+	`nano ~/.bash_profile`
+
+* Scroll to the end of the file, and type the following:
+	`source ~/<path_to_your_file>/manage_downloads.sh`
+
+For example, if you stored it in your `home/user` directory, it would be: 
+	`source ~/manage_downloads.sh` 
+
+* Save and exit properly. (To exit `nano`, type `Ctrl+O`, hit `Enter`, and then `Ctrl+X`. If you are on `vim`, hit `Esc`, then `:wq`)
+
+* Now go ahead and source your `bash_profile` file: 
+	`source ~/.bash_profile
+
+* There you have it! Your script is now ready to be run as a normal command line function! Now just navigate to the directory of your choice, and type the following on your terminal as you would do with any other command!
+	`manage_downloads`
 
 
-- If one directory already exists with the similar name, the files should just be moved to that.
-- If not, one should be created, and the files should be moved inside of it.
-- The program should check for the existence of the directory each time it finds a file of the respective extension.
 
-###  I'm sure there could be endless possibilities into it, and more items could be automated, but since this is my only second, and a pretty beginner project in bash, I will limit my scope around this; and maybe, improvise as I go, or reach towards the end.  
+### Closing Remarks 
+
+* Now this script, does not detect the files, it just has a function to do the sorting, and traps the different file types with the folder names during the function call. 
+
+* If you have a clutter of file types that's not mentioned before, just add a new line and specify those filetypes and you'll be done! 
+
+* Don't forget to source it again after you make any changes. 
+
+* And send me a PR if you find a better way to do it, or if you think I'm missing something useful.;)
+
+### Happy Decluttering! 
